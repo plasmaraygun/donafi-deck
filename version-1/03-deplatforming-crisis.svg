@@ -1,0 +1,158 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- VB6 THEME: DEEP CRISIS DARK -->
+    <linearGradient id="crisisBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0505">
+        <animate attributeName="stop-color" values="#1a0505;#250a0a;#1a0505" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#0d0202">
+        <animate attributeName="stop-color" values="#0d0202;#150505;#0d0202" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- ACCENT GRADIENT: WARNING RED/ORANGE -->
+    <linearGradient id="crisisGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#ff0055"/>
+      <stop offset="100%" style="stop-color:#ff5500"/>
+    </linearGradient>
+    
+    <!-- GLOW FILTER -->
+    <filter id="glow" height="300%" width="300%" x="-75%" y="-75%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- GRID PATTERN -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(255,85,0,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- BACKGROUND -->
+  <rect width="100%" height="100%" fill="url(#crisisBg)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- HEADER -->
+  <g transform="translate(600, 80)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#ffffff" filter="url(#glow)">
+      DEPLATFORMING CRISIS
+    </text>
+    <text x="0" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#ff5500" letter-spacing="4">
+      EXISTENTIAL THREAT TO FREE EXPRESSION
+    </text>
+    <rect x="-100" y="60" width="200" height="2" fill="url(#crisisGrad)"/>
+  </g>
+  
+  <!-- CONTENT CONTAINER -->
+  <g transform="translate(60, 200)">
+    
+    <!-- COLUMN 1: THE CENSORSHIP EPIDEMIC -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="340" height="520" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,0,85,0.2)" stroke-width="1"/>
+      <rect x="0" y="0" width="340" height="60" rx="10" fill="rgba(255,0,85,0.1)"/>
+      <text x="170" y="38" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" fill="#ff0055">
+        CENSORSHIP EPIDEMIC
+      </text>
+      
+      <g transform="translate(30, 90)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Platform Purges:</text>
+        <path d="M 0 20 L 280 20" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="14" fill="#ffcccc">• GoFundMe removes political campaigns</text>
+        <text x="0" y="80" font-family="Arial, sans-serif" font-size="14" fill="#ffcccc">• Kickstarter enforces ideology</text>
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="14" fill="#ffcccc">• PayPal freezes accounts at will</text>
+        
+        <text x="0" y="170" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">Scale of Exclusion:</text>
+        <path d="M 0 190 L 280 190" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        
+        <text x="140" y="240" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" fill="#ff0055" filter="url(#glow)">1.7B</text>
+        <text x="140" y="270" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">UNBANKED GLOBALLY</text>
+        
+        <text x="140" y="330" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" fill="#ff0055" filter="url(#glow)">$50B+</text>
+        <text x="140" y="360" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">BLOCKED ANNUALLY</text>
+      </g>
+    </g>
+    
+    <!-- COLUMN 2: SINGLE POINTS OF FAILURE -->
+    <g transform="translate(370, 0)">
+      <rect x="0" y="0" width="340" height="520" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,85,0,0.2)" stroke-width="1"/>
+      <rect x="0" y="0" width="340" height="60" rx="10" fill="rgba(255,85,0,0.1)"/>
+      <text x="170" y="38" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" fill="#ff5500">
+        CENTRALIZED CONTROL
+      </text>
+      
+      <g transform="translate(170, 120)">
+        <!-- Visualization of Centralization -->
+        <circle cx="0" cy="0" r="60" fill="none" stroke="#ff5500" stroke-width="2" stroke-dasharray="4,4"/>
+        <text x="0" y="15" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" fill="#ff5500">3</text>
+        <text x="0" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">COMPANIES CONTROL</text>
+        <text x="0" y="100" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="24" fill="#ffffff">80%+</text>
+        <text x="0" y="120" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#aaaaaa">OF DIGITAL PAYMENTS</text>
+        
+        <rect x="-120" y="160" width="240" height="1" fill="rgba(255,85,0,0.3)"/>
+        
+        <text x="0" y="200" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffccaa">Visa • Mastercard • PayPal</text>
+        
+        <g transform="translate(0, 260)">
+          <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffffff">The Mechanism:</text>
+          <text x="-120" y="30" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="#cccccc">1. Pressure Campaigns</text>
+          <text x="-120" y="55" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="#cccccc">2. Corporate Compliance</text>
+          <text x="-120" y="80" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="#cccccc">3. Regulatory Capture</text>
+          <text x="-120" y="105" text-anchor="start" font-family="Arial, sans-serif" font-size="14" fill="#cccccc">4. Systemic Exclusion</text>
+        </g>
+      </g>
+    </g>
+    
+    <!-- COLUMN 3: STRATEGIC IMPLICATIONS -->
+    <g transform="translate(740, 0)">
+      <rect x="0" y="0" width="340" height="520" rx="10" fill="rgba(255,255,255,0.03)" stroke="rgba(255,0,0,0.2)" stroke-width="1"/>
+      <rect x="0" y="0" width="340" height="60" rx="10" fill="rgba(255,0,0,0.1)"/>
+      <text x="170" y="38" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="20" fill="#ff3333">
+        NATIONAL SECURITY
+      </text>
+      
+      <g transform="translate(30, 90)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" font-style="italic">"Not a business problem.</text>
+        <text x="0" y="25" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff" font-style="italic">A security problem."</text>
+        
+        <path d="M 0 50 L 280 50" stroke="rgba(255,255,255,0.1)" stroke-width="1"/>
+        
+        <g transform="translate(0, 80)">
+          <rect x="0" y="0" width="280" height="70" rx="4" fill="rgba(255,0,0,0.05)"/>
+          <text x="10" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ff5555">Financial Sovereignty</text>
+          <text x="10" y="50" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Compromised by private platforms</text>
+        </g>
+        
+        <g transform="translate(0, 160)">
+          <rect x="0" y="0" width="280" height="70" rx="4" fill="rgba(255,0,0,0.05)"/>
+          <text x="10" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ff5555">Geopolitical Risk</text>
+          <text x="10" y="50" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Adversary influence on infrastructure</text>
+        </g>
+        
+        <g transform="translate(0, 240)">
+          <rect x="0" y="0" width="280" height="70" rx="4" fill="rgba(255,0,0,0.05)"/>
+          <text x="10" y="25" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ff5555">Crisis Response</text>
+          <text x="10" y="50" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Degraded by centralized bottlenecks</text>
+        </g>
+        
+        <g transform="translate(0, 330)">
+          <rect x="0" y="0" width="280" height="60" rx="4" fill="rgba(0,255,157,0.1)" stroke="rgba(0,255,157,0.3)"/>
+          <text x="140" y="25" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#00ff9d">THE DONAFI SOLUTION</text>
+          <text x="140" y="45" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">CENSORSHIP-RESISTANT INFRASTRUCTURE</text>
+        </g>
+      </g>
+    </g>
+    
+  </g>
+  
+  <!-- FOOTER -->
+  <g transform="translate(600, 760)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666666">
+      DONAFI | DECENTRALIZED FINANCIAL INFRASTRUCTURE
+    </text>
+    <text x="500" y="0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#666666">
+      SLIDE 03
+    </text>
+  </g>
+
+</svg>
