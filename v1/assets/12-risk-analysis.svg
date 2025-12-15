@@ -1,0 +1,191 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- VB6 THEME: DEEP OCEAN TEAL -->
+    <linearGradient id="vb6Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05151a">
+        <animate attributeName="stop-color" values="#05151a;#0a2025;#05151a" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#020a0d">
+        <animate attributeName="stop-color" values="#020a0d;#051015;#020a0d" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- ACCENT GRADIENTS -->
+    <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00b4d8"/>
+      <stop offset="100%" style="stop-color:#0077b6"/>
+    </linearGradient>
+    
+    <!-- GLOW FILTER -->
+    <filter id="glow" height="300%" width="300%" x="-75%" y="-75%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- GRID PATTERN -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,180,216,0.05)" stroke-width="1"/>
+    </pattern>
+    
+    <!-- SHIELD SYMBOL -->
+    <symbol id="shield" viewBox="0 0 100 100">
+      <path d="M 50 0 L 100 20 L 100 50 Q 100 80 50 100 Q 0 80 0 50 L 0 20 Z" fill="none" stroke-width="4"/>
+    </symbol>
+  </defs>
+  
+  <!-- BACKGROUND -->
+  <rect width="100%" height="100%" fill="url(#vb6Bg)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- HEADER -->
+  <g transform="translate(600, 80)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#ffffff" filter="url(#glow)">
+      RISK ANALYSIS
+    </text>
+    <text x="0" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#00b4d8" letter-spacing="4">
+      MITIGATION STRATEGIES
+    </text>
+    <rect x="-100" y="60" width="200" height="2" fill="url(#shieldGrad)"/>
+  </g>
+  
+  <!-- RISK GRID -->
+  <g transform="translate(100, 180)">
+    
+    <!-- ROW 1 -->
+    
+    <!-- Card 1: Regulatory -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="300" height="240" rx="8" fill="rgba(255,165,0,0.05)" stroke="rgba(255,165,0,0.3)"/>
+      <rect x="0" y="0" width="300" height="40" rx="8" fill="rgba(255,165,0,0.1)"/>
+      
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffaa00">REGULATORY</text>
+      <text x="280" y="25" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#ffaa00">MEDIUM</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Key Concern:</text>
+        <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Multi-jurisdiction compliance</text>
+        
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Mitigation:</text>
+        <text x="0" y="70" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Compliance-first design</text>
+        <text x="0" y="90" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Regulatory arbitrage</text>
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Legal reserve fund</text>
+      </g>
+    </g>
+    
+    <!-- Card 2: Technical -->
+    <g transform="translate(350, 0)">
+      <rect x="0" y="0" width="300" height="240" rx="8" fill="rgba(0,255,157,0.05)" stroke="rgba(0,255,157,0.3)"/>
+      <rect x="0" y="0" width="300" height="40" rx="8" fill="rgba(0,255,157,0.1)"/>
+      
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00ff9d">TECHNICAL</text>
+      <text x="280" y="25" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#00ff9d">LOW</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Key Concern:</text>
+        <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Smart contract vulnerabilities</text>
+        
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Mitigation:</text>
+        <text x="0" y="70" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Multiple security audits</text>
+        <text x="0" y="90" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• $1M+ bug bounty program</text>
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Formal verification</text>
+      </g>
+    </g>
+    
+    <!-- Card 3: Market -->
+    <g transform="translate(700, 0)">
+      <rect x="0" y="0" width="300" height="240" rx="8" fill="rgba(255,165,0,0.05)" stroke="rgba(255,165,0,0.3)"/>
+      <rect x="0" y="0" width="300" height="40" rx="8" fill="rgba(255,165,0,0.1)"/>
+      
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffaa00">MARKET</text>
+      <text x="280" y="25" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#ffaa00">MEDIUM</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Key Concern:</text>
+        <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Crypto market volatility</text>
+        
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Mitigation:</text>
+        <text x="0" y="70" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Diversified use cases</text>
+        <text x="0" y="90" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Stablecoin integration</text>
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Counter-cyclical demand</text>
+      </g>
+    </g>
+    
+    <!-- ROW 2 -->
+    
+    <!-- Card 4: Competitive -->
+    <g transform="translate(0, 260)">
+      <rect x="0" y="0" width="300" height="240" rx="8" fill="rgba(0,255,157,0.05)" stroke="rgba(0,255,157,0.3)"/>
+      <rect x="0" y="0" width="300" height="40" rx="8" fill="rgba(0,255,157,0.1)"/>
+      
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00ff9d">COMPETITIVE</text>
+      <text x="280" y="25" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#00ff9d">LOW</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Key Concern:</text>
+        <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">New entrants / Incumbents</text>
+        
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Mitigation:</text>
+        <text x="0" y="70" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• 18-month technical lead</text>
+        <text x="0" y="90" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Strong network effects</text>
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Regulatory moat</text>
+      </g>
+    </g>
+    
+    <!-- Card 5: Operational -->
+    <g transform="translate(350, 260)">
+      <rect x="0" y="0" width="300" height="240" rx="8" fill="rgba(255,165,0,0.05)" stroke="rgba(255,165,0,0.3)"/>
+      <rect x="0" y="0" width="300" height="40" rx="8" fill="rgba(255,165,0,0.1)"/>
+      
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#ffaa00">OPERATIONAL</text>
+      <text x="280" y="25" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#ffaa00">MEDIUM</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Key Concern:</text>
+        <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Scaling challenges</text>
+        
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Mitigation:</text>
+        <text x="0" y="70" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Automated systems</text>
+        <text x="0" y="90" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Experienced hiring</text>
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Redundant infrastructure</text>
+      </g>
+    </g>
+    
+    <!-- Card 6: Financial -->
+    <g transform="translate(700, 260)">
+      <rect x="0" y="0" width="300" height="240" rx="8" fill="rgba(0,255,157,0.05)" stroke="rgba(0,255,157,0.3)"/>
+      <rect x="0" y="0" width="300" height="40" rx="8" fill="rgba(0,255,157,0.1)"/>
+      
+      <text x="20" y="25" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00ff9d">FINANCIAL</text>
+      <text x="280" y="25" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#00ff9d">LOW</text>
+      
+      <g transform="translate(20, 60)">
+        <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Key Concern:</text>
+        <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Funding shortfall</text>
+        
+        <text x="0" y="50" font-family="Arial, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">Mitigation:</text>
+        <text x="0" y="70" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Conservative projections</text>
+        <text x="0" y="90" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• Multiple revenue streams</text>
+        <text x="0" y="110" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">• 18-month runway</text>
+      </g>
+    </g>
+    
+  </g>
+  
+  <!-- BOTTOM SECTION: INSURANCE &amp; PROTECTION -->
+  <g transform="translate(100, 700)">
+    <use href="#shield" x="0" y="0" width="50" height="50" stroke="#00b4d8"/>
+    <text x="60" y="20" font-family="Arial, sans-serif" font-size="14" font-weight="bold" fill="#ffffff">INSURANCE &amp; PROTECTION</text>
+    <text x="60" y="40" font-family="Arial, sans-serif" font-size="12" fill="#cccccc">Nexus Mutual Smart Contract Coverage • Professional Liability • Cyber Security Insurance</text>
+  </g>
+  
+  <!-- FOOTER -->
+  <g transform="translate(600, 760)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666666">
+      DONAFI | DECENTRALIZED FINANCIAL INFRASTRUCTURE
+    </text>
+    <text x="500" y="0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#666666">
+      SLIDE 12
+    </text>
+  </g>
+
+</svg>

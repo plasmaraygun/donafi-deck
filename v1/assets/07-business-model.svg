@@ -1,0 +1,142 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- VB6 THEME: DEEP OCEAN TEAL -->
+    <linearGradient id="vb6Bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#05151a">
+        <animate attributeName="stop-color" values="#05151a;#0a2025;#05151a" dur="10s" repeatCount="indefinite"/>
+      </stop>
+      <stop offset="100%" style="stop-color:#020a0d">
+        <animate attributeName="stop-color" values="#020a0d;#051015;#020a0d" dur="10s" repeatCount="indefinite"/>
+      </stop>
+    </linearGradient>
+    
+    <!-- ACCENT GRADIENTS -->
+    <linearGradient id="moneyGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#00ff9d"/>
+      <stop offset="100%" style="stop-color:#00cc7a"/>
+    </linearGradient>
+    
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:rgba(255,255,255,0.05)"/>
+      <stop offset="100%" style="stop-color:rgba(255,255,255,0.01)"/>
+    </linearGradient>
+    
+    <!-- GLOW FILTER -->
+    <filter id="glow" height="300%" width="300%" x="-75%" y="-75%">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="3" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+    
+    <!-- GRID PATTERN -->
+    <pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse">
+      <path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(0,255,157,0.05)" stroke-width="1"/>
+    </pattern>
+  </defs>
+  
+  <!-- BACKGROUND -->
+  <rect width="100%" height="100%" fill="url(#vb6Bg)"/>
+  <rect width="100%" height="100%" fill="url(#grid)"/>
+  
+  <!-- HEADER -->
+  <g transform="translate(600, 80)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" fill="#ffffff" filter="url(#glow)">
+      BUSINESS MODEL
+    </text>
+    <text x="0" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" fill="#00ff9d" letter-spacing="4">
+      PLATFORM ECONOMICS AT SCALE
+    </text>
+    <rect x="-100" y="60" width="200" height="2" fill="url(#moneyGrad)"/>
+  </g>
+  
+  <!-- REVENUE STREAMS CONTAINER -->
+  <g transform="translate(100, 200)">
+    
+    <!-- STREAM 1: PLATFORM FEES -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="300" height="380" rx="8" fill="url(#cardGrad)" stroke="#00ff9d" stroke-width="2"/>
+      <rect x="0" y="0" width="300" height="60" rx="8" fill="rgba(0,255,157,0.1)"/>
+      
+      <text x="150" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00ff9d">PLATFORM FEES</text>
+      
+      <g transform="translate(150, 140)">
+        <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="64" fill="#ffffff" filter="url(#glow)">5%</text>
+        <text x="0" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#aaaaaa">PER TRANSACTION</text>
+        
+        <line x1="-80" y1="70" x2="80" y2="70" stroke="rgba(0,255,157,0.3)"/>
+        
+        <text x="0" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Automated Collection</text>
+        <text x="0" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">No Processing Risk</text>
+        <text x="0" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Scalable with Volume</text>
+      </g>
+    </g>
+    
+    <!-- STREAM 2: CONVERSION FEES -->
+    <g transform="translate(350, 0)">
+      <rect x="0" y="0" width="300" height="380" rx="8" fill="url(#cardGrad)" stroke="rgba(0,180,216,0.5)" stroke-width="1"/>
+      <rect x="0" y="0" width="300" height="60" rx="8" fill="rgba(0,180,216,0.1)"/>
+      
+      <text x="150" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#00b4d8">CONVERSION FEES</text>
+      
+      <g transform="translate(150, 140)">
+        <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" fill="#ffffff">1%</text>
+        <text x="0" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#aaaaaa">ON FX / BRIDGING</text>
+        
+        <line x1="-80" y1="70" x2="80" y2="70" stroke="rgba(0,180,216,0.3)"/>
+        
+        <text x="0" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Crypto-to-Fiat</text>
+        <text x="0" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Cross-Chain Swaps</text>
+        <text x="0" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Premium Rates</text>
+      </g>
+    </g>
+    
+    <!-- STREAM 3: PREMIUM FEATURES -->
+    <g transform="translate(700, 0)">
+      <rect x="0" y="0" width="300" height="380" rx="8" fill="url(#cardGrad)" stroke="rgba(255,255,255,0.3)" stroke-width="1"/>
+      <rect x="0" y="0" width="300" height="60" rx="8" fill="rgba(255,255,255,0.1)"/>
+      
+      <text x="150" y="38" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="bold" fill="#ffffff">PREMIUM FEATURES</text>
+      
+      <g transform="translate(150, 140)">
+        <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" fill="#ffffff">SaaS</text>
+        <text x="0" y="40" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#aaaaaa">RECURRING REVENUE</text>
+        
+        <line x1="-80" y1="70" x2="80" y2="70" stroke="rgba(255,255,255,0.2)"/>
+        
+        <text x="0" y="110" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Analytics Dashboards</text>
+        <text x="0" y="140" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">Marketing Tools</text>
+        <text x="0" y="170" text-anchor="middle" font-family="Arial, sans-serif" font-size="14" fill="#ffffff">White-Label Solutions</text>
+      </g>
+    </g>
+    
+  </g>
+  
+  <!-- BOTTOM METRICS -->
+  <g transform="translate(100, 620)">
+    
+    <!-- Margin Box -->
+    <g transform="translate(0, 0)">
+      <rect x="0" y="0" width="480" height="100" rx="8" fill="rgba(0,255,157,0.05)" stroke="#00ff9d"/>
+      <text x="240" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00ff9d">GROSS MARGIN</text>
+      <text x="240" y="75" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" fill="#ffffff" filter="url(#glow)">85-90%</text>
+    </g>
+    
+    <!-- Profitability Box -->
+    <g transform="translate(520, 0)">
+      <rect x="0" y="0" width="480" height="100" rx="8" fill="rgba(0,180,216,0.05)" stroke="#00b4d8"/>
+      <text x="240" y="30" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="bold" fill="#00b4d8">PROFITABILITY TIMELINE</text>
+      <text x="240" y="70" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="32" fill="#ffffff">MONTH 12-14</text>
+    </g>
+    
+  </g>
+  
+  <!-- FOOTER -->
+  <g transform="translate(600, 760)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#666666">
+      DONAFI | DECENTRALIZED FINANCIAL INFRASTRUCTURE
+    </text>
+    <text x="500" y="0" text-anchor="end" font-family="Arial, sans-serif" font-size="12" fill="#666666">
+      SLIDE 07
+    </text>
+  </g>
+
+</svg>
