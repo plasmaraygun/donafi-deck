@@ -1,0 +1,249 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- STATIC BACKGROUND GRADIENT -->
+    <linearGradient id="blendedCoverBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0033;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1b2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000814;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- SUBTLE NEON GRADIENT -->
+    <linearGradient id="synthwaveNeon" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#6a4c93;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#9d4edd;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#c77dff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#e0aaff;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- GLITCH DISTORTION FILTER -->
+    <filter id="glitchDistortion" x="-50%" y="-50%" width="200%" height="200%">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.8 0 0 0  0 0 1 0 0  0 0 0 1 0">
+        <animate attributeName="values" 
+                 values="1 0 0 0 0  0 0.8 0 0 0  0 0 1 0 0  0 0 0 1 0;
+                         0.9 0.1 0 0 0  0 0.7 0.2 0 0  0.1 0 0.9 0 0  0 0 0 1 0;
+                         1 0 0 0 0  0 0.8 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                 dur="20s" repeatCount="indefinite"/>
+      </feColorMatrix>
+      <feOffset dx="1" dy="0">
+        <animate attributeName="dx" values="1;-1;0;1" dur="25s" repeatCount="indefinite"/>
+      </feOffset>
+    </filter>
+    
+    <!-- CRYSTALLINE REFRACTION -->
+    <filter id="crystallineRefraction" x="-100%" y="-100%" width="300%" height="300%">
+      <feGaussianBlur stdDeviation="6" result="coloredBlur">
+        <animate attributeName="stdDeviation" values="6;9;6" dur="18s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feSpecularLighting result="specOut" in="coloredBlur" specularConstant="1.2" specularExponent="12" lighting-color="#ffffff">
+        <fePointLight x="100" y="100" z="300">
+          <animate attributeName="x" values="100;250;100" dur="30s" repeatCount="indefinite"/>
+        </fePointLight>
+      </feSpecularLighting>
+      <feComposite in="specOut" in2="SourceAlpha" operator="in" result="specOut2"/>
+      <feComposite in="SourceGraphic" in2="specOut2" operator="arithmetic" k1="0" k2="1" k3="1" k4="0"/>
+    </filter>
+    
+    <!-- SYNTHWAVE GRID PATTERN -->
+    <pattern id="synthGrid" width="60" height="60" patternUnits="userSpaceOnUse">
+      <path d="M 60 0 L 0 0 0 60" fill="none" stroke="#6a4c93" stroke-width="0.5" opacity="0.1">
+        <animate attributeName="opacity" values="0.1;0.25;0.1" dur="12s" repeatCount="indefinite"/>
+      </path>
+    </pattern>
+    
+    <!-- CRYSTALLINE PATTERN -->
+    <pattern id="crystalPattern" width="100" height="100" patternUnits="userSpaceOnUse">
+      <polygon points="50,20 70,40 50,60 30,40" fill="none" stroke="#9d4edd" stroke-width="0.8" opacity="0.15">
+        <animate attributeName="opacity" values="0.15;0.35;0.15" dur="16s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="20,50 40,70 20,90 0,70" fill="#c77dff" opacity="0.05">
+        <animate attributeName="opacity" values="0.05;0.2;0.05" dur="20s" repeatCount="indefinite"/>
+      </polygon>
+    </pattern>
+  </defs>
+  
+  <!-- BACKGROUND -->
+  <rect width="1200" height="800" fill="url(#blendedCoverBg)"/>
+  <rect width="1200" height="800" fill="url(#synthGrid)" opacity="0.3"/>
+  <rect width="1200" height="800" fill="url(#crystalPattern)" opacity="0.2"/>
+  
+  <!-- MAIN TITLE -->
+  <g id="mainTitle" transform="translate(600,200)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" 
+          fill="url(#synthwaveNeon)" filter="url(#crystallineRefraction)">
+      DONAFI
+    </text>
+    
+    <!-- Glitch overlay -->
+    <text x="3" y="-2" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" 
+          fill="#00ffff" opacity="0.6" filter="url(#glitchDistortion)">
+      D0N4F1
+    </text>
+    
+    <!-- Crystalline reflection -->
+    <text x="-2" y="1" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="48" font-weight="900" 
+          fill="#ffffff" opacity="0.2">
+      DONAFI
+    </text>
+  </g>
+  
+  <!-- SUBTITLE -->
+  <g id="subtitle" transform="translate(600,280)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="300" 
+          fill="#ffffff" filter="url(#crystallineRefraction)">
+      Decentralized Financial Infrastructure for Global Humanitarian Response
+    </text>
+    
+    <!-- Glitch variant -->
+    <text x="1" y="-1" text-anchor="middle" font-family="Arial, sans-serif" font-size="18" font-weight="300" 
+          fill="#ff0080" opacity="0.4" filter="url(#glitchDistortion)">
+      D3c3ntr4l1z3d F1n4nc14l 1nfr4structur3
+    </text>
+  </g>
+  
+  <!-- TAGLINE -->
+  <g id="tagline" transform="translate(600,340)">
+    <text x="0" y="25" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="16" font-weight="bold" 
+          fill="url(#synthwaveNeon)">
+      Censorship-Resistant Crowdfunding for Crisis Response
+    </text>
+  </g>
+  
+  <!-- KEY METRICS -->
+  <g id="keyMetrics" transform="translate(150,450)">
+    <!-- Market Size -->
+    <g transform="translate(0,0)">
+      <text x="100" y="60" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#9d4edd">
+        Market Size
+      </text>
+      <text x="100" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        $250B+ Global
+      </text>
+      <text x="100" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Crowdfunding
+      </text>
+    </g>
+    
+    <!-- Investment -->
+    <g transform="translate(250,0)">
+      <text x="100" y="65" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#c77dff">
+        Investment
+      </text>
+      <text x="100" y="80" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        $1.5M Seed
+      </text>
+      <text x="100" y="95" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        $10M Pre-money
+      </text>
+    </g>
+    
+    <!-- Strategic Value -->
+    <g transform="translate(500,0)">
+      <text x="100" y="60" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#e0aaff">
+        Strategic Value
+      </text>
+      <text x="100" y="75" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Financial
+      </text>
+      <text x="100" y="90" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Sovereignty
+      </text>
+    </g>
+    
+    <!-- Technology Moat -->
+    <g transform="translate(750,0)">
+      <text x="100" y="70" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#6a4c93">
+        Tech Moat
+      </text>
+      <text x="100" y="85" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        First-Mover
+      </text>
+      <text x="100" y="100" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Advantage
+      </text>
+    </g>
+  </g>
+  
+  <!-- WHY NOW SECTION -->
+  <g id="whyNow" transform="translate(100,600)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#synthwaveNeon)" filter="url(#crystallineRefraction)">WHY NOW</text>
+    
+    <g transform="translate(0,40)">
+      <text x="0" y="0" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Deplatforming Crisis: Traditional platforms systematically censor causes
+      </text>
+      <text x="0" y="20" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Technology Convergence: Blockchain ready for mainstream adoption
+      </text>
+      <text x="0" y="40" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Geopolitical Fragmentation: Need for neutral, censorship-resistant rails
+      </text>
+      
+      <text x="500" y="0" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Crisis Response: Rapid aid when traditional systems fail
+      </text>
+      <text x="500" y="20" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Market Pull: $250B+ market with no true decentralized competitor
+      </text>
+    </g>
+  </g>
+  
+  <!-- ENHANCED CORNER ELEMENTS -->
+  <g id="cornerElements">
+    <!-- Top left -->
+    <g transform="translate(30,30)">
+      <polygon points="0,0 50,0 40,10 10,10 10,40 0,50" fill="none" stroke="#6a4c93" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.05;1" dur="8s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="15,15 35,15 30,20 20,20" fill="#9d4edd" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 17.5;360 25 17.5" dur="20s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Top right -->
+    <g transform="translate(1120,30)">
+      <polygon points="50,0 0,0 10,10 40,10 40,40 50,50" fill="none" stroke="#9d4edd" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.9;0.6;0.9" dur="4.2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.08;1" dur="9s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="35,15 15,15 20,20 30,20" fill="#c77dff" opacity="0.7">
+        <animate attributeName="opacity" values="1;0.7;1" dur="3.2s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 17.5;-360 25 17.5" dur="22s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Bottom left -->
+    <g transform="translate(30,720)">
+      <polygon points="0,50 50,50 40,40 10,40 10,10 0,0" fill="none" stroke="#c77dff" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="4.4s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.06;1" dur="10s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="15,35 35,35 30,30 20,30" fill="#e0aaff" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="3.4s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 32.5;360 25 32.5" dur="18s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Bottom right -->
+    <g transform="translate(1120,720)">
+      <polygon points="50,50 0,50 10,40 40,40 40,10 50,0" fill="none" stroke="#e0aaff" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.9;0.6;0.9" dur="4.6s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.07;1" dur="11s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="35,35 15,35 20,30 30,30" fill="#6a4c93" opacity="0.7">
+        <animate attributeName="opacity" values="1;0.7;1" dur="3.6s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 32.5;-360 25 32.5" dur="24s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+  </g>
+  
+  <!-- CONFIDENTIAL FOOTER -->
+  <g id="footer" transform="translate(600,760)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" 
+          fill="#ffffff" opacity="0.6">
+      Confidential - For Strategic Investor Use Only
+    </text>
+  </g>
+</svg>

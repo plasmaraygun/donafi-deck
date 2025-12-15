@@ -1,0 +1,285 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- STATIC BACKGROUND GRADIENT -->
+    <linearGradient id="blendedTeamBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f051a;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a0d2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#2d0a47;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- SUBTLE TEAM GRADIENT -->
+    <linearGradient id="teamGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6a4c93;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#9d4edd;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#c77dff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#e0aaff;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- SUBTLE GLITCH EFFECT -->
+    <filter id="teamGlitch" x="-20%" y="-20%" width="140%" height="140%">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.99 0 0 0  0 0 1 0 0  0 0 0 1 0">
+        <animate attributeName="values" 
+                 values="1 0 0 0 0  0 0.99 0 0 0  0 0 1 0 0  0 0 0 1 0;
+                         0.999 0.001 0 0 0  0 0.989 0.002 0 0  0.001 0 0.999 0 0  0 0 0 1 0;
+                         1 0 0 0 0  0 0.99 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                 dur="36s" repeatCount="indefinite"/>
+      </feColorMatrix>
+      <feOffset dx="0.005" dy="0">
+        <animate attributeName="dx" values="0.005;-0.005;0;0.005" dur="44s" repeatCount="indefinite"/>
+      </feOffset>
+    </filter>
+    
+    <!-- CRYSTALLINE GLOW -->
+    <filter id="teamGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="13" result="coloredBlur">
+        <animate attributeName="stdDeviation" values="13;16;13" dur="30s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- SYNTHWAVE GRID -->
+    <pattern id="teamGrid" width="240" height="240" patternUnits="userSpaceOnUse">
+      <path d="M 240 0 L 0 0 0 240" fill="none" stroke="#6a4c93" stroke-width="0.06" opacity="0.015">
+        <animate attributeName="opacity" values="0.015;0.05;0.015" dur="34s" repeatCount="indefinite"/>
+      </path>
+    </pattern>
+  </defs>
+  
+  <!-- BACKGROUND -->
+  <rect width="1200" height="800" fill="url(#blendedTeamBg)"/>
+  <rect width="1200" height="800" fill="url(#teamGrid)"/>
+  
+  <!-- TITLE -->
+  <g id="teamTitle" transform="translate(600,50)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" 
+          fill="url(#teamGradient)" filter="url(#teamGlow)">
+      TEAM &amp; ADVISORS
+    </text>
+    
+    <!-- Glitch variant -->
+    <text x="1" y="-1" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" 
+          fill="#9d4edd" opacity="0.06" filter="url(#teamGlitch)">
+      T34M &amp; 4DV150RS
+    </text>
+  </g>
+  
+  <!-- SUBTITLE -->
+  <g id="teamSubtitle" transform="translate(600,100)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="300" 
+          fill="#ffffff">
+      Execution Capability • World-Class Team • Deep Domain Expertise
+    </text>
+  </g>
+  
+  <!-- FOUNDING TEAM SECTION -->
+  <g id="foundingTeam" transform="translate(80,150)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#teamGradient)" filter="url(#teamGlow)">FOUNDING TEAM</text>
+    
+    <!-- Josh Kim -->
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#6a4c93">
+        Josh Kim - Founder
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • M&amp;A Professional with extensive transaction experience
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Serial entrepreneur with multiple successful ventures
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Strategic vision for decentralized financial infrastructure
+      </text>
+    </g>
+    
+    <!-- Pedro Rivera -->
+    <g transform="translate(520,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#9d4edd">
+        Pedro Rivera - Co-Founder
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • 20+ years in sales, marketing &amp; community building
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Proven track record in scaling user acquisition
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Strategic partnerships and business development leadership
+      </text>
+    </g>
+  </g>
+  
+  <!-- TECHNICAL LEADERSHIP SECTION -->
+  <g id="technicalLeadership" transform="translate(80,300)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#teamGradient)" filter="url(#teamGlow)">TECHNICAL LEADERSHIP</text>
+    
+    <!-- Kevin Van Boeckholtz -->
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#c77dff">
+        Kevin Van Boeckholtz - Chief Technology Officer
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Systems Architect specializing in SAAS &amp; Real Time systems
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Deep expertise in scalable infrastructure design
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Experience building high-performance financial systems
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Technical leadership in complex distributed architectures
+      </text>
+    </g>
+    
+    <!-- Jon Stokes -->
+    <g transform="translate(520,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#e0aaff">
+        Jon Stokes - Blockchain Architect
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Award-winning blockchain developer
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • AI Safety pioneer with cutting-edge research
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Deep expertise in smart contract security and optimization
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Technical innovation in decentralized systems design
+      </text>
+    </g>
+  </g>
+  
+  <!-- ADVISORY BOARD SECTION -->
+  <g id="advisoryBoard" transform="translate(80,450)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#teamGradient)" filter="url(#teamGlow)">ADVISORY BOARD</text>
+    
+    <!-- Michael Terpin -->
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#6a4c93">
+        Michael Terpin - Advisor/Investor
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Legendary blockchain advisor and investor
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Extensive portfolio of successful blockchain ventures
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Deep industry connections and strategic guidance
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Proven track record in scaling crypto companies
+      </text>
+    </g>
+    
+    <!-- Core Values -->
+    <g transform="translate(520,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#9d4edd">
+        Core Values &amp; Culture
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Censorship resistance: Unwavering commitment to free expression
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Global accessibility: Financial inclusion for all populations
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Transparency: Open-source development and public governance
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Security first: Paranoid approach to user fund protection
+      </text>
+    </g>
+  </g>
+  
+  <!-- EXECUTION CAPABILITY -->
+  <g id="executionCapability" transform="translate(80,600)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#teamGradient)" filter="url(#teamGlow)">EXECUTION CAPABILITY &amp; KEY RELATIONSHIPS</text>
+    
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="16" font-weight="bold" fill="#c77dff">
+        World-class team. Proven execution. Strategic advisors. Ready to scale.
+      </text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Remote-first culture with quarterly in-person gatherings • Open communication with transparent decision making
+      </text>
+      <text x="0" y="48" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Government contacts through advisory board connections • Institutional investors through existing network
+      </text>
+      <text x="0" y="66" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Technology partners through previous professional relationships • Nonprofit sector through mission-aligned advisory board
+      </text>
+      <text x="0" y="84" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Continuous learning with education budget • Work-life balance with unlimited PTO and mental health support
+      </text>
+    </g>
+  </g>
+  
+  <!-- ENHANCED CORNER ELEMENTS -->
+  <g id="cornerElements">
+    <!-- Top left -->
+    <g transform="translate(30,30)">
+      <polygon points="0,0 50,0 40,10 10,10 10,40 0,50" fill="none" stroke="#6a4c93" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="12s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.002;1" dur="24s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="15,15 35,15 30,20 20,20" fill="#9d4edd" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 17.5;360 25 17.5" dur="60s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Top right -->
+    <g transform="translate(1120,30)">
+      <polygon points="50,0 0,0 10,10 40,10 40,40 50,50" fill="none" stroke="#9d4edd" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.9;0.6;0.9" dur="12.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.008;1" dur="26s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="35,15 15,15 20,20 30,20" fill="#c77dff" opacity="0.7">
+        <animate attributeName="opacity" values="1;0.7;1" dur="11.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 17.5;-360 25 17.5" dur="62s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Bottom left -->
+    <g transform="translate(30,720)">
+      <polygon points="0,50 50,50 40,40 10,40 10,10 0,0" fill="none" stroke="#c77dff" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="13s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.005;1" dur="28s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="15,35 35,35 30,30 20,30" fill="#e0aaff" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="12s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 32.5;360 25 32.5" dur="56s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Bottom right -->
+    <g transform="translate(1120,720)">
+      <polygon points="50,50 0,50 10,40 40,40 40,10 50,0" fill="none" stroke="#e0aaff" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.9;0.6;0.9" dur="13.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.012;1" dur="30s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="35,35 15,35 20,30 30,30" fill="#6a4c93" opacity="0.7">
+        <animate attributeName="opacity" values="1;0.7;1" dur="12.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 32.5;-360 25 32.5" dur="65s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+  </g>
+  
+  <!-- FOOTER -->
+  <g id="footer" transform="translate(600,760)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" 
+          fill="#ffffff" opacity="0.6">
+      World-class team. Proven execution. Strategic advisors. Ready to scale.
+    </text>
+  </g>
+</svg>

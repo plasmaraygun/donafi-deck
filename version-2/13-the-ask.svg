@@ -1,0 +1,310 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- STATIC BACKGROUND GRADIENT -->
+    <linearGradient id="blendedAskBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1a0033;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#0d1b2a;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#000814;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- SUBTLE ASK GRADIENT -->
+    <linearGradient id="askGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6a4c93;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#9d4edd;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#c77dff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#e0aaff;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- SUBTLE GLITCH EFFECT -->
+    <filter id="askGlitch" x="-20%" y="-20%" width="140%" height="140%">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.998 0 0 0  0 0 1 0 0  0 0 0 1 0">
+        <animate attributeName="values" 
+                 values="1 0 0 0 0  0 0.998 0 0 0  0 0 1 0 0  0 0 0 1 0;
+                         0.9998 0.0002 0 0 0  0 0.9978 0.0005 0 0  0.0002 0 0.9998 0 0  0 0 0 1 0;
+                         1 0 0 0 0  0 0.998 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                 dur="40s" repeatCount="indefinite"/>
+      </feColorMatrix>
+      <feOffset dx="0.001" dy="0">
+        <animate attributeName="dx" values="0.001;-0.001;0;0.001" dur="48s" repeatCount="indefinite"/>
+      </feOffset>
+    </filter>
+    
+    <!-- CRYSTALLINE GLOW -->
+    <filter id="askGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="15" result="coloredBlur">
+        <animate attributeName="stdDeviation" values="15;18;15" dur="34s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- SYNTHWAVE GRID -->
+    <pattern id="askGrid" width="280" height="280" patternUnits="userSpaceOnUse">
+      <path d="M 280 0 L 0 0 0 280" fill="none" stroke="#6a4c93" stroke-width="0.03" opacity="0.008">
+        <animate attributeName="opacity" values="0.008;0.03;0.008" dur="38s" repeatCount="indefinite"/>
+      </path>
+    </pattern>
+  </defs>
+  
+  <!-- BACKGROUND -->
+  <rect width="1200" height="800" fill="url(#blendedAskBg)"/>
+  <rect width="1200" height="800" fill="url(#askGrid)"/>
+  
+  <!-- TITLE -->
+  <g id="askTitle" transform="translate(600,50)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" 
+          fill="url(#askGradient)" filter="url(#askGlow)">
+      THE ASK
+    </text>
+    
+    <!-- Glitch variant -->
+    <text x="1" y="-1" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" 
+          fill="#9d4edd" opacity="0.03" filter="url(#askGlitch)">
+      TH3 45K
+    </text>
+  </g>
+  
+  <!-- SUBTITLE -->
+  <g id="askSubtitle" transform="translate(600,100)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="300" 
+          fill="#ffffff">
+      Strategic Partnership • $1.5M Seed Round • Democratic Infrastructure Investment
+    </text>
+  </g>
+  
+  <!-- INVESTMENT TERMS SECTION -->
+  <g id="investmentTerms" transform="translate(80,150)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#askGradient)" filter="url(#askGlow)">INVESTMENT TERMS &amp; STRUCTURE</text>
+    
+    <!-- Funding Round -->
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#6a4c93">
+        Funding Round Structure
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Amount: $1.5M seed round at $10M pre-money valuation
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Investor Ownership: 13% equity stake ($11.5M post-money)
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Security Type: Series Seed Preferred Stock
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Liquidation Preference: 1x non-participating preferred
+      </text>
+    </g>
+    
+    <!-- Use of Funds -->
+    <g transform="translate(520,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#9d4edd">
+        Use of Funds Breakdown
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Product Development: $600K (40%) - Smart contracts, security audits
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Team Expansion: $450K (30%) - CFO and compliance officer hires
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Marketing &amp; Growth: $300K (20%) - User acquisition, partnerships
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Operations &amp; Legal: $150K (10%) - Regulatory compliance
+      </text>
+    </g>
+  </g>
+  
+  <!-- STRATEGIC VALUE SECTION -->
+  <g id="strategicValue" transform="translate(80,300)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#askGradient)" filter="url(#askGlow)">STRATEGIC VALUE BEYOND CAPITAL</text>
+    
+    <!-- InQtel/Government -->
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#c77dff">
+        For InQtel/Government Investors
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Regulatory guidance: Navigate multi-jurisdiction compliance
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Government relations: Facilitate agency partnerships
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Policy influence: Shape regulatory frameworks for DeFi
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Security clearance: Access to classified national security briefings
+      </text>
+    </g>
+    
+    <!-- Sovereign Wealth -->
+    <g transform="translate(380,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#e0aaff">
+        For Sovereign Wealth Funds
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Technology transfer: Blockchain expertise for national initiatives
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Market intelligence: Early insights into DeFi evolution
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Portfolio diversification: Crisis-resistant infrastructure assets
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • ESG alignment: Quantifiable social impact metrics
+      </text>
+    </g>
+    
+    <!-- Impact Investors -->
+    <g transform="translate(760,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#6a4c93">
+        For Impact Investors
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Impact measurement: Direct tracking of humanitarian aid
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Theory of change: Clear pathway to social outcomes
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Stakeholder engagement: Global nonprofit networks
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Reporting framework: Comprehensive ESG analytics
+      </text>
+    </g>
+  </g>
+  
+  <!-- INVESTMENT HIGHLIGHTS -->
+  <g id="investmentHighlights" transform="translate(80,450)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#askGradient)" filter="url(#askGlow)">INVESTMENT HIGHLIGHTS &amp; RETURNS</text>
+    
+    <!-- Market Opportunity -->
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#9d4edd">
+        Market Opportunity &amp; Technology Moat
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • $250B+ TAM with no direct decentralized competitor
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Crisis-driven demand creates inelastic market dynamics
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Antifragile architecture gets stronger under pressure
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • First-mover advantage with 18-month technical lead
+      </text>
+    </g>
+    
+    <!-- Financial Returns -->
+    <g transform="translate(520,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#c77dff">
+        Financial Projections &amp; Returns
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Break-even: Month 12-14 with conservative projections
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Year 3 Revenue: $50M conservative, $250M bull case
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Gross Margins: 85-90% with platform economics
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Return Potential: 6.5x-32.5x for seed investors
+      </text>
+    </g>
+  </g>
+  
+  <!-- NEXT STEPS -->
+  <g id="nextSteps" transform="translate(80,600)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#askGradient)" filter="url(#askGlow)">NEXT STEPS &amp; TIMELINE</text>
+    
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="16" font-weight="bold" fill="#e0aaff">
+        Strategic partnership opportunity. Democratic infrastructure investment. Exceptional return potential.
+      </text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Due Diligence: 4-6 weeks for qualified investors • Term Sheet: 2 weeks negotiation period
+      </text>
+      <text x="0" y="48" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Total Timeline: 10-12 weeks from initial meeting to funding • Data room access upon signed NDA
+      </text>
+      <text x="0" y="66" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Board Structure: 2 founder seats, 1 investor seat for lead investor ($500K+ investment)
+      </text>
+      <text x="0" y="84" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Contact: michael@donafi.io • Technical demo available for qualified investors
+      </text>
+    </g>
+  </g>
+  
+  <!-- ENHANCED CORNER ELEMENTS -->
+  <g id="cornerElements">
+    <!-- Top left -->
+    <g transform="translate(30,30)">
+      <polygon points="0,0 50,0 40,10 10,10 10,40 0,50" fill="none" stroke="#6a4c93" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="14s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.0005;1" dur="28s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="15,15 35,15 30,20 20,20" fill="#9d4edd" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="13s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 17.5;360 25 17.5" dur="70s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Top right -->
+    <g transform="translate(1120,30)">
+      <polygon points="50,0 0,0 10,10 40,10 40,40 50,50" fill="none" stroke="#9d4edd" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.9;0.6;0.9" dur="14.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.004;1" dur="30s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="35,15 15,15 20,20 30,20" fill="#c77dff" opacity="0.7">
+        <animate attributeName="opacity" values="1;0.7;1" dur="13.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 17.5;-360 25 17.5" dur="72s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Bottom left -->
+    <g transform="translate(30,720)">
+      <polygon points="0,50 50,50 40,40 10,40 10,10 0,0" fill="none" stroke="#c77dff" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="15s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.002;1" dur="32s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="15,35 35,35 30,30 20,30" fill="#e0aaff" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="14s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 32.5;360 25 32.5" dur="65s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Bottom right -->
+    <g transform="translate(1120,720)">
+      <polygon points="50,50 0,50 10,40 40,40 40,10 50,0" fill="none" stroke="#e0aaff" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.9;0.6;0.9" dur="15.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.007;1" dur="34s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="35,35 15,35 20,30 30,30" fill="#6a4c93" opacity="0.7">
+        <animate attributeName="opacity" values="1;0.7;1" dur="14.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 32.5;-360 25 32.5" dur="75s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+  </g>
+  
+  <!-- FOOTER -->
+  <g id="footer" transform="translate(600,760)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" 
+          fill="#ffffff" opacity="0.6">
+      Strategic partnership opportunity. Democratic infrastructure investment. Exceptional return potential.
+    </text>
+  </g>
+</svg>

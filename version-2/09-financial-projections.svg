@@ -1,0 +1,310 @@
+<svg width="1200" height="800" viewBox="0 0 1200 800" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- STATIC BACKGROUND GRADIENT -->
+    <linearGradient id="blendedFinancialBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#2d0a47;stop-opacity:1" />
+      <stop offset="50%" style="stop-color:#1a0d2e;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0f051a;stop-opacity:1" />
+    </linearGradient>
+    
+    <!-- SUBTLE FINANCIAL GRADIENT -->
+    <linearGradient id="financialGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#6a4c93;stop-opacity:1" />
+      <stop offset="30%" style="stop-color:#9d4edd;stop-opacity:0.9" />
+      <stop offset="70%" style="stop-color:#c77dff;stop-opacity:0.8" />
+      <stop offset="100%" style="stop-color:#e0aaff;stop-opacity:0.9" />
+    </linearGradient>
+    
+    <!-- SUBTLE GLITCH EFFECT -->
+    <filter id="financialGlitch" x="-20%" y="-20%" width="140%" height="140%">
+      <feColorMatrix type="matrix" values="1 0 0 0 0  0 0.96 0 0 0  0 0 1 0 0  0 0 0 1 0">
+        <animate attributeName="values" 
+                 values="1 0 0 0 0  0 0.96 0 0 0  0 0 1 0 0  0 0 0 1 0;
+                         0.995 0.005 0 0 0  0 0.955 0.01 0 0  0.005 0 0.995 0 0  0 0 0 1 0;
+                         1 0 0 0 0  0 0.96 0 0 0  0 0 1 0 0  0 0 0 1 0"
+                 dur="32s" repeatCount="indefinite"/>
+      </feColorMatrix>
+      <feOffset dx="0.02" dy="0">
+        <animate attributeName="dx" values="0.02;-0.02;0;0.02" dur="40s" repeatCount="indefinite"/>
+      </feOffset>
+    </filter>
+    
+    <!-- CRYSTALLINE GLOW -->
+    <filter id="financialGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="11" result="coloredBlur">
+        <animate attributeName="stdDeviation" values="11;14;11" dur="26s" repeatCount="indefinite"/>
+      </feGaussianBlur>
+      <feMerge> 
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    
+    <!-- SYNTHWAVE GRID -->
+    <pattern id="financialGrid" width="200" height="200" patternUnits="userSpaceOnUse">
+      <path d="M 200 0 L 0 0 0 200" fill="none" stroke="#6a4c93" stroke-width="0.1" opacity="0.025">
+        <animate attributeName="opacity" values="0.025;0.08;0.025" dur="30s" repeatCount="indefinite"/>
+      </path>
+    </pattern>
+  </defs>
+  
+  <!-- BACKGROUND -->
+  <rect width="1200" height="800" fill="url(#blendedFinancialBg)"/>
+  <rect width="1200" height="800" fill="url(#financialGrid)"/>
+  
+  <!-- TITLE -->
+  <g id="financialTitle" transform="translate(600,50)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" 
+          fill="url(#financialGradient)" filter="url(#financialGlow)">
+      FINANCIAL PROJECTIONS
+    </text>
+    
+    <!-- Glitch variant -->
+    <text x="1" y="-1" text-anchor="middle" font-family="Arial Black, sans-serif" font-size="28" font-weight="900" 
+          fill="#9d4edd" opacity="0.1" filter="url(#financialGlitch)">
+      F1N4NC14L PR0J3CT10NS
+    </text>
+  </g>
+  
+  <!-- SUBTITLE -->
+  <g id="financialSubtitle" transform="translate(600,100)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="16" font-weight="300" 
+          fill="#ffffff">
+      Hyperscale Potential • Path to $250M+ Revenue • Platform Economics
+    </text>
+  </g>
+  
+  <!-- THREE-YEAR MODEL SECTION -->
+  <g id="threeYearModel" transform="translate(80,150)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#financialGradient)" filter="url(#financialGlow)">THREE-YEAR FINANCIAL MODEL</text>
+    
+    <!-- Conservative Case -->
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#6a4c93">
+        Conservative Case Projections
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Year 1: 2,000 campaigns • $10M GMV • $575K revenue • 85% gross margin
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Year 2: 50,000 campaigns • $250M GMV • $14.4M revenue • 88% gross margin
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Year 3: 200,000 campaigns • $1B GMV • $57.5M revenue • 90% gross margin
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Break-even timeline: Q2-Q3 2027 (12-15 months post-launch)
+      </text>
+    </g>
+    
+    <!-- Bull Case -->
+    <g transform="translate(520,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#9d4edd">
+        Bull Case (1% Market Capture)
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Year 1: $25M GMV • $1.25M revenue • $1.06M gross profit
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Year 2: $1B GMV • $50M revenue • $44M gross profit
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Year 3: $5B GMV • $250M revenue • $225M gross profit
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        Break-even timeline: Month 6-8 (bull case scenario)
+      </text>
+    </g>
+  </g>
+  
+  <!-- UNIT ECONOMICS SECTION -->
+  <g id="unitEconomics" transform="translate(80,300)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#financialGradient)" filter="url(#financialGlow)">UNIT ECONOMICS &amp; GROWTH DRIVERS</text>
+    
+    <!-- Customer Economics -->
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#c77dff">
+        Customer Economics
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Customer Acquisition Cost (CAC): $25-50 blended across all channels
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Customer Lifetime Value (LTV): $625 per organizer (2.5 campaigns × $250)
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • LTV/CAC ratio: 12.5-25x (excellent unit economics)
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Immediate payback on first successful campaign
+      </text>
+    </g>
+    
+    <!-- Revenue Growth Drivers -->
+    <g transform="translate(380,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#e0aaff">
+        Revenue Growth Drivers
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Network effects: User growth drives campaign growth exponentially
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Crisis events create viral adoption spikes
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Geographic expansion multiplies addressable market
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Enterprise adoption increases average campaign size
+      </text>
+    </g>
+    
+    <!-- Operating Expenses -->
+    <g transform="translate(760,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#6a4c93">
+        Operating Expense Model
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Year 1: $2.4M (8 FTE) - Personnel 50%, Marketing 20%
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Year 2: $8M (25 FTE) - Scale operations and marketing
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Year 3: $20M (60 FTE) - Full-scale operations
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • EBITDA margins: -317% → 44% → 65% (Years 1-3)
+      </text>
+    </g>
+  </g>
+  
+  <!-- PROFITABILITY &amp; CASH FLOW -->
+  <g id="profitabilityCashFlow" transform="translate(80,450)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#financialGradient)" filter="url(#financialGlow)">PROFITABILITY &amp; CASH FLOW ANALYSIS</text>
+    
+    <!-- Cash Flow Projections -->
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#9d4edd">
+        Cash Flow Projections
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Operating Cash Flow: -$1.9M → $6.65M → $37.75M (Years 1-3)
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Free Cash Flow: -$2.1M → $6.25M → $36.75M (Years 1-3)
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Cumulative cash generation: $40M+ by end of Year 3
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Cash positive: Month 24 onwards with strong generation
+      </text>
+    </g>
+    
+    <!-- Sensitivity Analysis -->
+    <g transform="translate(520,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="14" font-weight="bold" fill="#c77dff">
+        Sensitivity Analysis
+      </text>
+      <text x="0" y="25" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Downside (50% of conservative): $28.75M revenue, still profitable
+      </text>
+      <text x="0" y="43" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Upside (2x bull case): $500M revenue, market-leading position
+      </text>
+      <text x="0" y="61" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Key variables: Campaign size ($3K-$10K), Platform fee (3%-7%)
+      </text>
+      <text x="0" y="79" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Growth rate: 15%-40% monthly, Market penetration: 0.1%-2%
+      </text>
+    </g>
+  </g>
+  
+  <!-- FUNDING &amp; RETURNS -->
+  <g id="fundingReturns" transform="translate(80,600)">
+    <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="18" font-weight="bold" 
+          fill="url(#financialGradient)" filter="url(#financialGlow)">FUNDING REQUIREMENTS &amp; INVESTOR RETURNS</text>
+    
+    <g transform="translate(0,50)">
+      <text x="0" y="0" font-family="Arial Black, sans-serif" font-size="16" font-weight="bold" fill="#e0aaff">
+        Conservative projections show clear path to profitability. Bull case demonstrates generational return potential.
+      </text>
+      <text x="0" y="30" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Seed Round: $1.5M at $10M pre-money (13% ownership) • 18-month runway to break-even
+      </text>
+      <text x="0" y="48" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Year 3 valuation: $500M-$2.5B (10-50x revenue multiple) • Investor return: 6.5x-32.5x (650%-3,250% IRR)
+      </text>
+      <text x="0" y="66" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Comparable valuations: GoFundMe $3B on $300M revenue (10x), Stripe $95B on $12B revenue (8x)
+      </text>
+      <text x="0" y="84" font-family="Arial, sans-serif" font-size="12" fill="#ffffff">
+        • Series A: $10M at 24 months for scale operations and geographic expansion
+      </text>
+    </g>
+  </g>
+  
+  <!-- ENHANCED CORNER ELEMENTS -->
+  <g id="cornerElements">
+    <!-- Top left -->
+    <g transform="translate(30,30)">
+      <polygon points="0,0 50,0 40,10 10,10 10,40 0,50" fill="none" stroke="#6a4c93" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="10s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.005;1" dur="20s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="15,15 35,15 30,20 20,20" fill="#9d4edd" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="9s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 17.5;360 25 17.5" dur="50s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Top right -->
+    <g transform="translate(1120,30)">
+      <polygon points="50,0 0,0 10,10 40,10 40,40 50,50" fill="none" stroke="#9d4edd" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.9;0.6;0.9" dur="10.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.015;1" dur="22s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="35,15 15,15 20,20 30,20" fill="#c77dff" opacity="0.7">
+        <animate attributeName="opacity" values="1;0.7;1" dur="9.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 17.5;-360 25 17.5" dur="52s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Bottom left -->
+    <g transform="translate(30,720)">
+      <polygon points="0,50 50,50 40,40 10,40 10,10 0,0" fill="none" stroke="#c77dff" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.6;0.9;0.6" dur="11s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.01;1" dur="24s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="15,35 35,35 30,30 20,30" fill="#e0aaff" opacity="0.7">
+        <animate attributeName="opacity" values="0.7;1;0.7" dur="10s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 32.5;360 25 32.5" dur="48s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+    
+    <!-- Bottom right -->
+    <g transform="translate(1120,720)">
+      <polygon points="50,50 0,50 10,40 40,40 40,10 50,0" fill="none" stroke="#e0aaff" stroke-width="2" opacity="0.6">
+        <animate attributeName="opacity" values="0.9;0.6;0.9" dur="11.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="scale" values="1;1.02;1" dur="26s" repeatCount="indefinite"/>
+      </polygon>
+      <polygon points="35,35 15,35 20,30 30,30" fill="#6a4c93" opacity="0.7">
+        <animate attributeName="opacity" values="1;0.7;1" dur="10.5s" repeatCount="indefinite"/>
+        <animateTransform attributeName="transform" type="rotate" values="0 25 32.5;-360 25 32.5" dur="55s" repeatCount="indefinite"/>
+      </polygon>
+    </g>
+  </g>
+  
+  <!-- FOOTER -->
+  <g id="footer" transform="translate(600,760)">
+    <text x="0" y="0" text-anchor="middle" font-family="Arial, sans-serif" font-size="12" font-style="italic" 
+          fill="#ffffff" opacity="0.6">
+      Conservative projections show clear path to profitability. Bull case demonstrates generational return potential.
+    </text>
+  </g>
+</svg>
